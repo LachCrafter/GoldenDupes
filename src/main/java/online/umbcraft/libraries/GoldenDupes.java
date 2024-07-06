@@ -128,4 +128,13 @@ public final class GoldenDupes extends JavaPlugin {
         return instance;
     }
 
+    public boolean isFolia() {
+        try {
+            Class.forName("io.papermc.paper.threadedregions.RegionizedServer");
+            return true;
+        } catch (ClassNotFoundException e) {
+            return false;
+        }
+    }
+
 }
